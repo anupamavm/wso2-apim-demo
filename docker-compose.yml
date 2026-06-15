@@ -1,0 +1,29 @@
+services:
+  wso2apim:
+    image: wso2/wso2am:4.4.0
+    container_name: wso2apim
+
+    ports:
+      - "9443:9443"
+      - "8243:8243"
+      - "8280:8280"
+
+    environment:
+      JAVA_OPTS: "-Xms2g -Xmx2g"
+
+    restart: unless-stopped
+
+  patient-api:
+    build: ./patient-api
+    ports:
+      - "3001:3000"
+
+  doctor-api:
+    build: ./doctor-api
+    ports:
+      - "3002:3001"
+
+  appointment-api:
+    build: ./appointment-api
+    ports:
+      - "3003:3002"
