@@ -78,7 +78,7 @@ This setup uses a sidecar-style deployment where multiple Node.js Express APIs a
 7. Go to **Lifecycle** and check the status of the deployment.
 ![API Endpoints](./img/6.jpeg)
 
-8. In this way add all other apis as well.
+8. In this way register all other apis as well.
 
 
 ### 2. Subscribe to the API
