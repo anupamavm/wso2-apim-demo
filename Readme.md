@@ -1,13 +1,23 @@
-# WSO2 API Manager Demo
+# 🏥 Healthcare Microservices with WSO2 API Manager 4.4.0
 
-This project demonstrates a microservices architecture integrated with **WSO2 API Manager 4.4.0**. It includes three Node.js backend services (Patient, Doctor, and Appointment) managed through a central API Gateway.
+[![WSO2](https://img.shields.io/badge/WSO2-APIM%204.4.0-orange)](https://wso2.com/api-manager/)
+[![Node.js](https://img.shields.io/badge/Backend-Node.js-green)](https://nodejs.org/)
+[![Docker](https://img.shields.io/badge/Container-Docker-blue)](https://www.docker.com/)
+
+A comprehensive demonstration of a modern microservices architecture managed by **WSO2 API Manager**. This project showcases how to secure, manage, and expose backend services (Patient, Doctor, and Appointment) through a unified API Gateway.
 
 ## Architecture Overview
 
-- **WSO2 APIM**: Acts as the Control Plane and Data Plane (Gateway).
-- **Patient API**: Express service running on port `3001` (Host) / `3000` (Container).
-- **Doctor API**: Express service running on port `3002` (Host) / `3000` (Container).
-- **Appointment API**: Express service running on port `3003` (Host) / `3000` (Container).
+This setup uses a sidecar-style deployment where multiple Node.js Express APIs are governed by a central WSO2 instance:
+
+*   **WSO2 APIM**: Centralized Control Plane for Designing, Publishing, and Managing APIs.
+*   **Traffic Management**: Handling traffic via the Data Plane (Gateway) on ports `8280`/`8243`.
+*   **Microservices**:
+    *   **Patient Service**: Manages patient records (Port `3001`).
+    *   **Doctor Service**: Manages practitioner data (Port `3002`).
+    *   **Appointment Service**: Orchestrates scheduling (Port `3003`).
+
+---
 
 ## Prerequisites
 
@@ -22,7 +32,8 @@ This project demonstrates a microservices architecture integrated with **WSO2 AP
    ```
 
 2. **Access the Consoles**:
-   Wait about 2-3 minutes for WSO2 APIM to fully initialize.
+   *Note: WSO2 APIM may take 2-3 minutes to fully boot.*
+
    - **Publisher Portal**: https://localhost:9443/publisher (To design and publish APIs)
    - **Developer Portal**: https://localhost:9443/devportal (To discover and subscribe)
    - **Admin Console**: https://localhost:9443/admin (Used for platform administration)
@@ -108,9 +119,18 @@ Click **Production Keys** > **Generate Keys**.
 
 ---
 
+## 🚀 Key Learning Objectives Demonstrated
+- **Full API Lifecycle**: From design and prototyping to publishing and retirement.
+- **Security**: Implementing OAuth2.0 token-based security for backend microservices.
+- **Abstraction**: Hiding internal container network details behind a clean, versioned public context.
+- **Governance**: Managing multiple services through a single pane of glass.
+
+---
+
 ## Backend Service Endpoints (Internal)
 
-If you want to test the backend services directly bypassing the Gateway:
+For direct debugging (bypassing the Gateway):
+
 | Service | Host URL | Internal Docker URL |
 | :--- | :--- | :--- |
 | Patient API | `http://localhost:3001` | `http://patient-api:3000` |
@@ -123,7 +143,7 @@ If you want to test the backend services directly bypassing the Gateway:
 If you see an error regarding `0.0.0.0:3000`, ensure no local Node.js processes are running on your host machine.
 
 ### WSO2 Startup Issues
-WSO2 requires significant resources. If the container exits, check the logs:
+WSO2 is resource-heavy. If the container exits, check the logs:
 ```bash
 docker logs -f wso2apim
 ```
