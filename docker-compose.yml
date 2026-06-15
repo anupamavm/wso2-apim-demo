@@ -14,16 +14,22 @@ services:
     restart: unless-stopped
 
   patient-api:
-    build: ./patient-api
+    build: ./patient_api
+    container_name: patient-api
     ports:
       - "3001:3000"
+    restart: unless-stopped
 
   doctor-api:
-    build: ./doctor-api
+    build: ./doctor_api
+    container_name: doctor-api
     ports:
-      - "3002:3001"
+      - "3002:3000"
+    restart: unless-stopped
 
   appointment-api:
-    build: ./appointment-api
+    build: ./appointment_api
+    container_name: appointment-api
     ports:
-      - "3003:3002"
+      - "3003:3000"
+    restart: unless-stopped
