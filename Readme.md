@@ -1,4 +1,4 @@
-# 🏥 Healthcare Microservices with WSO2 API Manager 4.4.0
+# 🏥 Healthcare Microservices with WSO2 API Manager 
 
 [![WSO2](https://img.shields.io/badge/WSO2-APIM%204.4.0-orange)](https://wso2.com/api-manager/)
 [![Node.js](https://img.shields.io/badge/Backend-Node.js-green)](https://nodejs.org/)
