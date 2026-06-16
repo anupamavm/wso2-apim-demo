@@ -58,7 +58,7 @@ This setup uses a sidecar-style deployment where multiple Node.js Express APIs a
    - **Version**: `1.0.0`
    - **Endpoint**: `http://patient-api:3000` (Note: We use the Docker container name here).
 
-![API Details](./img/2.jpeg)
+![API Details](/img/2.jpeg)
 
 4. Click **Create**.
 
