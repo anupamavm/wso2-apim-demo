@@ -58,56 +58,56 @@ This setup uses a sidecar-style deployment where multiple Node.js Express APIs a
    - **Version**: `1.0.0`
    - **Endpoint**: `http://patient-api:3000` (Note: We use the Docker container name here).
 
-![API Details](/img/2.jpeg)
+![API Details](/Img/2.jpeg)
 
 4. Click **Create**.
 
-![API Overview](./img/3.jpeg)
+![API Overview](./Img/3.jpeg)
 
 5. Navigate to **Resources** to define your paths (e.g., `/hello` ).
 
-![API Resources](./img/4.jpeg)
-![API Resources](./img/5.jpeg)
+![API Resources](./Img/4.jpeg)
+![API Resources](./Img/5.jpeg)
 
 
 6. Navigate to **Endpoints** and ensure the Production/Sandbox URLs are set to `http://patient-api:3000`.
 
 7. Go to **Deployments** and click **Deploy New Revision**.
-![API Endpoints](./img/7.jpeg)
+![API Endpoints](./Img/7.jpeg)
 
 7. Go to **Lifecycle** and check the status of the deployment.
-![API Endpoints](./img/6.jpeg)
+![API Endpoints](./Img/6.jpeg)
 
 8. In this way register all other apis as well.
 
 
 ### 2. Subscribe to the API
 1. Log in to the **Developer Portal**. You could see the available apis to be subscribed here.
-![Developer Portal](./img/8.jpeg)
+![Developer Portal](./Img/8.jpeg)
 
 2. Click on the `PatientAPI` you just published.
 3. Go to **Subscriptions**.
-![Subscriptions](./img/9.jpeg)
+![Subscriptions](./Img/9.jpeg)
 4. Click **Subscriptions** > **Add New Application**.
-![Add Application](./img/10.jpeg)
-![Add Application](./img/11.jpeg)
+![Add Application](./Img/10.jpeg)
+![Add Application](./Img/11.jpeg)
 5. Name it `DemoApp` and click **Save**.
 6. Select `DemoApp` and click **Subscribe**.
 7. Like that subscribe to all three services in the DemoApp
-![DemoApp Subscribtions](./img/12.jpeg)
+![DemoApp Subscribtions](./Img/12.jpeg)
 
 ### 3. Generate Keys and Invoke
 1. While in the Developer Portal, go to **Applications** > **DemoApp**.
 2. Click **Sandbox Keys** > **Generate Keys**.
-![Sandbox Keys](./img/13.jpeg)
+![Sandbox Keys](./Img/13.jpeg)
 
 2. And you can generate Production keys as well.
 Click **Production Keys** > **Generate Keys**.
-![Production Keys](./img/14.jpeg)
+![Production Keys](./Img/14.jpeg)
 
 3. Click **Generate Access Token**. Copy the token provided.
 
-![Access Token](./img/15.jpeg)
+![Access Token](./Img/15.jpeg)
 
 
 
