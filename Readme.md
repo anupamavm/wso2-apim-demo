@@ -49,7 +49,7 @@ This setup uses a sidecar-style deployment where multiple Node.js Express APIs a
 ### 1. Create and Publish an API
 1. Log in to the **Publisher Portal**.
 
-![Publisher Login Screen](./img/1.jpeg)
+![Publisher Login Screen](./Img/1.jpeg)
 
 2. Click **REST API** > **Start From Scratch**.
 3. Provide the details:
